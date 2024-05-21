@@ -1,0 +1,67 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--first-color);
+  }
+  .title{
+    display: flex;
+  }
+  
+  .logo {
+    flex: 1;
+    height: 25px;
+  }
+  
+  .login a{
+    color:white;
+  }
+  
+
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .logo {
+      order: 2;
+    }
+  
+    .nav {
+      order: 1;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .menu {
+      flex-direction: column;
+    }
+  
+    .menu li {
+      position: static;
+    }
+  
+    .menu li a {
+      display: block;
+      padding: 10px 20px;
+    }
+  
+    .submenu {
+      position: static;
+      display: none;
+    }
+  
+    .menu li:hover .submenu {
+      display: block;
+      margin-left: 20px;
+    }
+  
+    .login {
+      order: 3;
+      text-align: left;
+    }
+  }
+  

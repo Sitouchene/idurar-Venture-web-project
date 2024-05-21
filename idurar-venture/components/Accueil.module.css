@@ -1,0 +1,37 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 100vh;
+    color: var(--first-color);
+    font-size: var(--big-font-size);
+  }
+  .message{
+    display: inline;
+  }
+
+  .barredefil{
+    display: flex;
+    align-items: center;
+    margin-top: 0.3rem;
+    justify-content: space-between;
+    background-color: var(--first-color-second);
+    padding-right: 2rem;
+    
+  }
+  .icon {
+    flex: 0.1;
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+  .message {
+    flex: 3; 
+    text-align: center;
+    padding-left: 2rem;
+  }
+
+
