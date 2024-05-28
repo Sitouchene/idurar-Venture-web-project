@@ -9,6 +9,7 @@ return <footer className={styles.footer}>
             </div>
            
             <ul className={styles.socials}>
+            <p className="follow-us">Suivez-nous sur les réseaux</p>
                 <li><a href="#"><i> <FaFacebook/></i></a></li>
                 <li><a href="#"><i><FaTwitter/></i></a></li>
                 <li><a href="#"><i><FaYoutube/></i></a></li>
