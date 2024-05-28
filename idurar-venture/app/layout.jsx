@@ -9,6 +9,7 @@ import { useState } from 'react';
 import Randonnee from '@/components/Randonnee';
 import Accueil from '@/components/Accueil';
 
+import Parapente from'@/components/Parapente';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -23,8 +24,8 @@ export default function RootLayout() {
     }else if (page === 'Accueil'){
         contenu = <Accueil />
     }
-    else if(page === 'chasse'){
-       
+    else if(page === 'Parapente'){
+       contenu = <Parapente/>
     }
 
     return (
