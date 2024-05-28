@@ -17,7 +17,7 @@ export default function MenuNav({setPage}) {
         
           <li> <a href="#" onClick={() => setPage('Randonnee')}>Randonnee</a></li>
           <li><a href="/">Chasse</a></li>
-          <li><a href="/">Parapente</a></li>
+          <li> <a href="#" onClick={() => setPage('Parapente')}>Parapente</a></li>
           <li><a href="/">Autres</a></li>
 
         </ul>
