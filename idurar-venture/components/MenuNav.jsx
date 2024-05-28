@@ -1,21 +1,25 @@
 import React from 'react';
 import { FaHome, FaHiking, FaCalendarAlt } from "react-icons/fa";
+import Randonnee from './Randonnee';
 
 
 import styles from './MenuNav.module.css';
 
 
-export default function MenuNav() {
+export default function MenuNav({setPage}) {
     return <nav className={styles.nav}>
     <ul className={styles.menu}>
       <li><a href="/"><FaHome /> Accueil</a></li>
       <li>
         <a href=""><FaHiking /> Activités</a>
         <ul className={styles.submenu}>
-          <li><a href="/">Randonnée</a></li>
+         
+        
+          <li> <a href="#" onClick={() => setPage('Randonnee')}>Randonnee</a></li>
           <li><a href="/">Chasse</a></li>
           <li><a href="/">Parapente</a></li>
           <li><a href="/">Autres</a></li>
+
         </ul>
       </li>
       <li>
