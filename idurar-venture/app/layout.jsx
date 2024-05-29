@@ -10,6 +10,10 @@ import Randonnee from '@/components/Randonnee';
 import Accueil from '@/components/Accueil';
 
 import Parapente from'@/components/Parapente';
+import Chasse from '@/components/Chasse';
+import Inscription from '@/components/Inscription';
+import Evenements from '@/components/Evenements';
+import Feedback from '@/components/Feedback';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -27,6 +31,19 @@ export default function RootLayout() {
     else if(page === 'Parapente'){
        contenu = <Parapente/>
     }
+    else if(page === 'Chasse'){
+        contenu = <Chasse/>
+    }
+    else if(page === 'Inscription'){
+        contenu = <Inscription/>
+    }
+    else if(page === 'Evenements'){
+        contenu = <Evenements/>
+    }
+    else if(page === 'Feedback'){
+        contenu = <Feedback/>
+    }
+
 
     return (
         <html lang='en'>

@@ -6,6 +6,7 @@ import img07 from '@/public/mountain07.png';
 import img00 from '@/public/montain00.jpg';
 
 
+
 const message1= "-- Ansuf yiswen ar idurar-Venure  --  Bienvenue dans les montagnes d'aventures-- " ;
 
 export default function Accueil() {
