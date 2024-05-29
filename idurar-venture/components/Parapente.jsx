@@ -44,7 +44,6 @@ const Parapente = () => {
         </div>
         
         <div>
-        
         <Image src={parapante2} alt="Parapente 2" className={styles.image} />
         <h3>Village berbère harchaou</h3>
         </div>
