@@ -13,7 +13,7 @@ return <footer className={styles.footer}>
                 <li><a href="#"><i> <FaFacebook/></i></a></li>
                 <li><a href="#"><i><FaTwitter/></i></a></li>
                 <li><a href="#"><i><FaYoutube/></i></a></li>
-                <li><a href="#"><i><FaInstagram/></i></a></li>/*8*/
+                <li><a href="#"><i><FaInstagram/></i></a></li>
 
               </ul>
         
