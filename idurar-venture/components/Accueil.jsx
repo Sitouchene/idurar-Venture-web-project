@@ -22,7 +22,7 @@ export default function Accueil() {
         <div className={styles.welcome}>
         <div className={styles.welcomeimage}>
         Bienvenue sur idurar-Venture
-            <Image src={img07} alt="Logo" width={1000}  />
+            <Image src={img07} alt="Galerie Kabylie" width={1000}  />
             
         </div>
             

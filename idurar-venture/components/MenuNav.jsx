@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { FaHome, FaHiking, FaCalendarAlt, FaBars, FaTimes } from "react-icons/fa";
+import { VscFeedback } from "react-icons/vsc";
 import styles from './MenuNav.module.css';
 
-export default function MenuNav({ setPage }) {
+export default function MenuNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -15,18 +21,18 @@ export default function MenuNav({ setPage }) {
         {isMenuOpen ? <FaTimes /> : <FaBars />}
       </button>
       <ul className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}>
-        <li><a href="/"><FaHome /> Accueil</a></li>
+        <li><Link href="/" onClick={closeMenu}><FaHome /> Accueil</Link></li>
         <li>
-          <a href="#"><FaHiking /> Activités</a>
+          <a href="/" onClick={closeMenu}><FaHiking /> Activités</a>
           <ul className={styles.submenu}>
-            <li><a href="#" onClick={() => setPage('Randonnee')}>Randonnee</a></li>
-            <li><a href="#" onClick={() => setPage('Chasse')}>Chasse</a></li>
-            <li><a href="#" onClick={() => setPage('Parapente')}>Parapente</a></li>
-            <li><a href="#" onClick={() => setPage('Inscription')}>Inscription</a></li>
+            <li><Link href="/randonnee" onClick={() =>  closeMenu()}>Randonnée</Link></li>
+            <li><Link href="/chasse" onClick={() => closeMenu()}>Chasse</Link></li>
+            <li><Link href="/parapente" onClick={() => closeMenu()}>Parapente</Link></li>
+            <li><Link href="/inscription" onClick={() => closeMenu()}>Inscription</Link></li>
           </ul>
         </li>
-        <li><a href="#" onClick={() => setPage('Evenements')}><FaCalendarAlt /> Événements</a></li>
-        <li><a href="#" onClick={() => setPage('Feedback')}>Feedback</a></li>
+        <li><Link href="/evenements" onClick={() => closeMenu()}><FaCalendarAlt /> Événements</Link></li>
+        <li><Link href="/feedback" onClick={() => closeMenu()}><VscFeedback /> Feedback</Link></li>
       </ul>
     </nav>
   );

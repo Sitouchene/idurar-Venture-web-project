@@ -1,5 +1,7 @@
 .nav {
   flex: 3;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .menuToggle {
@@ -44,7 +46,6 @@
   display: block;
 }
 
-/* Media query pour les écrans de moins de 600px */
 @media (max-width: 600px) {
   .menuToggle {
     display: block;

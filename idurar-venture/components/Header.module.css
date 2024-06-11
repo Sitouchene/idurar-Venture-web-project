@@ -8,31 +8,36 @@
   }
   .title{
     display: flex;
+    font-size: 1.4vw;
   }
   
   .logo {
     flex: 1;
     height: 25px;
+    align-self: baseline;
   }
   
   .login a{
     color:white;
+    text-decoration: none;
   }
   
 
   @media (max-width: 600px) {
     .header {
       flex-direction: column;
-      align-items: flex-start;
+      align-items:normal;
     }
     
     .logo {
-      order: 2;
+      order: 0;
+      align-self: flex-start;
+      
     }
   
     .nav {
-      order: 1;
-      width: 100%;
+      order: 10;
+      width: auto;
       margin-bottom: 10px;
     }
   
@@ -60,8 +65,12 @@
     }
   
     .login {
-      order: 3;
+      order: 5;
+      align-self: self-end;
       text-align: left;
+    }
+    .title{
+      display: none;
     }
   }
   
