@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import styles from './Inscription.module.css';
 
 const Inscription = () => {
+  const today = new Date().toISOString().split('T')[0]; // Obtenir la date du jour au format 'YYYY-MM-DD'
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
     activity: '',
-    message: ''
+    message: '',
+    eventDate: today // Initialiser avec la date du jour
   });
 
   const [errors, setErrors] = useState({
@@ -48,6 +51,7 @@ const Inscription = () => {
         <h1 className={styles.title}>Inscription aux Activités</h1>
         <p className={styles.subtitle}>Inscrivez-vous à l'une de nos activités : Randonnée, Chasse, Parapente</p>
       </header>
+
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
           <label htmlFor="firstName">Prénom</label>
@@ -84,6 +88,7 @@ const Inscription = () => {
             required
           />
         </div>
+
         <div className={styles.formGroup}>
           <label htmlFor="phone">Téléphone</label>
           <input
@@ -95,6 +100,7 @@ const Inscription = () => {
             required
           />
         </div>
+
         <div className={styles.formGroup}>
           <label htmlFor="activity">Activité</label>
           <select
@@ -110,6 +116,19 @@ const Inscription = () => {
             <option value="Parapente">Parapente</option>
           </select>
         </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="eventDate">Date de l'événement</label>
+          <input
+            type="date"
+            id="eventDate"
+            name="eventDate"
+            value={formData.eventDate}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
         <button type="submit" className={styles.button}>S'inscrire</button>
       </form>
     </div>

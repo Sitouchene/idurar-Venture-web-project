@@ -1,14 +1,4 @@
-.welcome {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    min-height: 100vh;
-    color: var(--first-color);
-    font-size: var(--big-font-size);
-  }
+
   .message{
     display: inline;
   }
@@ -33,5 +23,28 @@
     text-align: center;
     padding-left: 2rem;
   }
+  .welcome_container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: var(--first-color);
+    font-size: var(--big-font-size);
+  }
+
+  .welcome-container img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.welcome_text {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(16, 212, 68, 0.5);
+}
 
 

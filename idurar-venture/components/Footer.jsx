@@ -3,9 +3,8 @@ import { FaTwitter, FaFacebook, FaYoutube,FaLinkedin,FaInstagram,FaSnapchat } fr
 export default function footer() {
 return <footer className={styles.footer}>
             <div className={styles.footerContent}>
-            <h3>idurarVenture</h3>
-
-            <p>IdurarVenture est votre guide ultime pour explorer les sommets majestueux de la Kabylie!<br></br> Plongez dans un monde d'aventures infinies au cœur des montagnes, où chaque sentier offre une nouvelle histoire à découvrir.</p>
+            <h4>idurarVenture</h4>
+            <p>... votre guide ultime pour explorer les sommets majestueux de la Kabylie!</p>
             </div>
            
             

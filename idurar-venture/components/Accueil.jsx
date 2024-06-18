@@ -19,16 +19,13 @@ export default function Accueil() {
         </div>
 
 
-        <div className={styles.welcome}>
-        <div className={styles.welcomeimage}>
-        Bienvenue sur idurar-Venture
-            <Image src={img07} alt="Galerie Kabylie" width={1000}  />
-            
-        </div>
-            
+        <div className={styles.welcome_container}>
         
-           
+            <div className={styles.welcome_text}>Bienvenue sur idurar-Venture</div>
+            <div className={styles.welcome_image}>
+                <Image  src={img07} alt="Galerie Kabylie" width={1000}  />
             
+            </div> 
         </div>
        
     </>

@@ -1,25 +1,44 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 10px 20px;
     color: white;
     background-color: var(--first-color);
   }
   .title{
-    display: flex;
-    font-size: 1.4vw;
+   
+    font-size: 0.8vw;
+    margin-left: 10px;
+    
   }
   
   .logo {
-    flex: 1;
+    flex: 2;
+    display: flex;
     height: 25px;
     align-self: baseline;
+    flex-direction: row;
+  
   }
   
   .login a{
     color:white;
     text-decoration: none;
+  }
+
+  .login_active{
+    background-color: white;
+    color:var(--first-color);
+    border-bottom:  var(--first-color-alt) double;
+    padding: 0px 5px; 
+  }
+  .login_active a{
+    text-decoration: none;
+  }
+
+  .login{
+    margin-left: 10px;
   }
   
 
@@ -35,34 +54,6 @@
       
     }
   
-    .nav {
-      order: 10;
-      width: auto;
-      margin-bottom: 10px;
-    }
-  
-    .menu {
-      flex-direction: column;
-    }
-  
-    .menu li {
-      position: static;
-    }
-  
-    .menu li a {
-      display: block;
-      padding: 10px 20px;
-    }
-  
-    .submenu {
-      position: static;
-      display: none;
-    }
-  
-    .menu li:hover .submenu {
-      display: block;
-      margin-left: 20px;
-    }
   
     .login {
       order: 5;
