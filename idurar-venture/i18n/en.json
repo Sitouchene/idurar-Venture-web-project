@@ -1,0 +1,15 @@
+{
+    "app.header.title": "Idurar Adventures",
+    "app.header.menu.lien1": "Home",
+    "app.header.menu.lien2": "Activities",
+    "app.header.menu.souslien21": "Hiking",
+    "app.header.menu.souslien22": "Hunting",
+    "app.header.menu.souslien23": "Paragliding ",
+    "app.header.menu.souslien24": "Subscription",
+    "app.header.menu.lien3": "Events",
+    "app.header.menu.lien4": "Feedback",
+    "app.header.login": "Login",
+    "app.header.menu.theme": "Dark:",
+    "app.footer.message":"... your ultimate guide to the majestic peaks of Kabylia!",
+    "app.footer.suivi":"Follow-us!"
+}

@@ -1,0 +1,17 @@
+{
+    "app.header.title": "Aventures Idurar",
+    "app.header.menu.lien1": "Accueil",
+    "app.header.menu.lien2": "Activités",
+    "app.header.menu.souslien21": "Randonnée",
+    "app.header.menu.souslien22": "Chasse",
+    "app.header.menu.souslien23": "Parapente",
+    "app.header.menu.souslien24": "Inscription",
+    "app.header.menu.lien3": "Evenements",
+    "app.header.menu.lien4": "Contacts",
+    "app.header.login": "Se connecter",
+    "app.header.menu.theme": "Sombre:",
+    "app.footer.message":"... votre guide ultime pour explorer les sommets majestueux de la Kabylie!",
+    "app.footer.suivi":"Suivez-nous!"
+
+
+}
