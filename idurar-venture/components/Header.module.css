@@ -40,7 +40,12 @@
   .login{
     margin-left: 10px;
   }
-  
+  .light{
+    background-color: var(--first-color);
+}
+.dark{
+    background-color: #000;
+}
 
   @media (max-width: 600px) {
     .header {
