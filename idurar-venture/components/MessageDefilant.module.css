@@ -3,7 +3,7 @@
 .container {
     width: 100%;
     overflow: hidden;
-    background-color: var(--first-color-second);
+    background-color: var(--first-color-alt);
     color:white;
    }
   

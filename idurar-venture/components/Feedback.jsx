@@ -24,6 +24,7 @@ export default function Feedback() {
   return (
 
     <div className={styles.container}>
+      <h1>Vos observations et rétroactions ! </h1>
       <p className={styles.subtitle}>Nous apprécions vos commentaires. Veuillez nous faire part de vos suggestions et impressions.</p>
       <br />
 
