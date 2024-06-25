@@ -10,39 +10,52 @@ const Inscription = () => {
     email: '',
     phone: '',
     activity: '',
-    message: '',
     eventDate: today // Initialiser avec la date du jour
   });
 
-  const [errors, setErrors] = useState({
-    firstName: '',
-    lastName: ''
-  });
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === 'firstName' || name === 'lastName') {
-      if (/[^a-zA-Z\s]/.test(value)) {
-        setErrors((prevErrors) => ({
-          ...prevErrors,
-          [name]: 'Ce champ ne doit contenir que des lettres.'
-        }));
-      } else {
-        setErrors((prevErrors) => ({
-          ...prevErrors,
-          [name]: ''
-        }));
-      }
-    }
-
     setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const validate = () => {
+    let errors = {};
+    const nameRegex = /^[a-zA-Z\s]{3,20}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/;
+    
+    if (!formData.firstName.trim() || !nameRegex.test(formData.firstName.trim())) {
+      errors.firstName = 'Le prénom est obligatoire, doit contenir entre 3 et 20 caractères, et ne doit contenir que des lettres.';
+    }
+    if (!formData.lastName.trim() || !nameRegex.test(formData.lastName.trim())) {
+      errors.lastName = 'Le nom est obligatoire, doit contenir entre 3 et 20 caractères, et ne doit contenir que des lettres.';
+    }
+    if (!formData.email || !emailRegex.test(formData.email)) {
+      errors.email = 'L\'email est obligatoire et doit être valide.';
+    }
+    if (formData.phone && !phoneRegex.test(formData.phone)) {
+      errors.phone = 'Le numéro de téléphone doit être valide et au format canadien.';
+    }
+    if (!formData.activity) {
+      errors.activity = 'Vous devez choisir une activité.';
+    }
+    if (!formData.eventDate || formData.eventDate <= today) {
+      errors.eventDate = 'La date de l\'événement doit être supérieure à la date d\'aujourd\'hui.';
+    }
+    
+    setErrors(errors);
+    return Object.keys(errors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ici, vous pouvez gérer la soumission du formulaire, par exemple, envoyer les données à votre serveur
-    console.log('Form submitted:', formData);
+    if (validate()) {
+      console.log('Form submitted:', formData);
+      // Ici, vous pouvez gérer la soumission du formulaire, par exemple, envoyer les données à votre serveur
+    }
   };
 
   return (
@@ -63,7 +76,7 @@ const Inscription = () => {
             onChange={handleChange}
             required
           />
-          {errors.firstName && <p className={styles.error}>{errors.firstName}</p>}
+          {errors.firstName && <label className={styles.error}>{errors.firstName}</label>}
         </div>
         <div className={styles.formGroup}>
           <label htmlFor="lastName">Nom</label>
@@ -75,7 +88,7 @@ const Inscription = () => {
             onChange={handleChange}
             required
           />
-          {errors.lastName && <p className={styles.error}>{errors.lastName}</p>}
+          {errors.lastName && <label className={styles.error}>{errors.lastName}</label>}
         </div>
         <div className={styles.formGroup}>
           <label htmlFor="email">Email</label>
@@ -87,6 +100,7 @@ const Inscription = () => {
             onChange={handleChange}
             required
           />
+          {errors.email && <label className={styles.error}>{errors.email}</label>}
         </div>
 
         <div className={styles.formGroup}>
@@ -97,8 +111,8 @@ const Inscription = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            required
           />
+          {errors.phone && <label className={styles.error}>{errors.phone}</label>}
         </div>
 
         <div className={styles.formGroup}>
@@ -115,6 +129,7 @@ const Inscription = () => {
             <option value="Chasse">Chasse</option>
             <option value="Parapente">Parapente</option>
           </select>
+          {errors.activity && <label className={styles.error}>{errors.activity}</label>}
         </div>
 
         <div className={styles.formGroup}>
@@ -127,6 +142,7 @@ const Inscription = () => {
             onChange={handleChange}
             required
           />
+          {errors.eventDate && <label className={styles.error}>{errors.eventDate}</label>}
         </div>
 
         <button type="submit" className={styles.button}>S'inscrire</button>

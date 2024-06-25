@@ -6,6 +6,7 @@ import styles from './PhotoGallery.module.css';
 export default function PhotoGallery() {
   const [photos, setPhotos] = useState([]);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     // Charger les données JSON
@@ -16,7 +17,7 @@ export default function PhotoGallery() {
   }, []);
 
   useEffect(() => {
-    if (photos.length === 0) return;
+    if (photos.length === 0 || isPaused) return;
 
     const interval = setInterval(() => {
       setCurrentPhotoIndex((prevIndex) =>
@@ -25,7 +26,19 @@ export default function PhotoGallery() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [photos]);
+  }, [photos, isPaused]);
+
+  const handlePrevClick = () => {
+    setCurrentPhotoIndex((prevIndex) =>
+      prevIndex === 0 ? photos.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNextClick = () => {
+    setCurrentPhotoIndex((prevIndex) =>
+      prevIndex === photos.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   if (photos.length === 0) return <div>Loading...</div>;
 
@@ -51,6 +64,22 @@ export default function PhotoGallery() {
           </div>
         </div>
       ))}
+      <div
+        className={`${styles.arrow} ${styles.leftArrow}`}
+        onClick={handlePrevClick}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        &#10094;
+      </div>
+      <div
+        className={`${styles.arrow} ${styles.rightArrow}`}
+        onClick={handleNextClick}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        &#10095;
+      </div>
     </div>
   );
 }

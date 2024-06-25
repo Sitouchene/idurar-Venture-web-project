@@ -15,13 +15,9 @@ export default function Accueil() {
             <div className={styles.icon}><FaHiking/> </div>
             <div className={styles.message}><MessageDefilant message={message1}/> </div>
             <div className={styles.icon}><FaSkiing/> </div>
-            
+                       
         </div>
-
-
-        
-            <PhotoGallery/>
-        
-       
+        <div className={styles.photoGallery}>  <PhotoGallery/> </div>
+           
     </>
 }
