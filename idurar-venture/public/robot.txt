@@ -1,0 +1,6 @@
+# Autoriser tous les robots
+User-agent: *
+Allow: /
+
+# Chemin du sitemap.xml
+Sitemap: https://localhost:3000/sitemap.xml

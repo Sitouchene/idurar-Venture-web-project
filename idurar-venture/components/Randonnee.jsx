@@ -25,11 +25,11 @@ export default function Randonnee() {
                     <p className={styles.trailDescription}>Une randonnée de 8 km à travers des paysages montagneux époustouflants.</p>
                 </div>
                 <div className={styles.trail}>
-                    <h2 className={styles.trailTitle}>Boucle de l'Akfadou</h2>
+                    <h2 className={styles.trailTitle}>Boucle de l&apos;Akfadou</h2>
                     <p className={styles.trailDescription}>Un sentier de 12 km entouré de forêts denses et de points de vue magnifiques.</p>
                 </div>
                 <div className={styles.trail}>
-                    <h2 className={styles.trailTitle}>Randonnée d'Aït Ouabane</h2>
+                    <h2 className={styles.trailTitle}>Randonnée d&apos;Aït Ouabane</h2>
                     <p className={styles.trailDescription}>Un parcours de 9 km avec des passages par des villages Harchaou.</p>
                 </div>
                 <div className={styles.trail}>

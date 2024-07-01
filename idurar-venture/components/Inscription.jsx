@@ -62,7 +62,7 @@ const Inscription = () => {
     <div className={styles.container}>
       <header className={styles.header}>
         <h1 className={styles.title}>Inscription aux Activités</h1>
-        <p className={styles.subtitle}>Inscrivez-vous à l'une de nos activités : Randonnée, Chasse, Parapente</p>
+        <p className={styles.subtitle}>Inscrivez-vous à l&apos;une de nos activités : Randonnée, Chasse, Parapente</p>
       </header>
 
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -133,7 +133,7 @@ const Inscription = () => {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="eventDate">Date de l'événement</label>
+          <label htmlFor="eventDate">Date de l&apos;événement</label>
           <input
             type="date"
             id="eventDate"
@@ -145,7 +145,7 @@ const Inscription = () => {
           {errors.eventDate && <label className={styles.error}>{errors.eventDate}</label>}
         </div>
 
-        <button type="submit" className={styles.button}>S'inscrire</button>
+        <button type="submit" className={styles.button}>S&apos;inscrire</button>
       </form>
     </div>
   );

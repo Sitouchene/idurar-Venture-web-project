@@ -19,6 +19,7 @@
     height: 25px;
     align-self: baseline;
     flex-direction: row;
+    aspect-ratio: 1.66;
   
   }
   
@@ -35,6 +36,8 @@
   }
   .login_active a{
     text-decoration: none;
+    background-color: white;
+    color:var(--first-color);
   }
 
   .login{

@@ -43,9 +43,11 @@ export default function MenuNav() {
   return (
     <nav className={styles.nav}>
 
-      <button className={styles.menuToggle} onClick={toggleMenu}>
-        {isMenuOpen ? <FaTimes /> : <FaBars />}
-      </button>
+      <button  className={styles.menuToggle} onClick={toggleMenu}
+      aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+    >
+      {isMenuOpen ? <FaTimes /> : <FaBars />}
+    </button>
       <ul className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ''}`}>
         
         <li > {/* Combine active & activeBox */}

@@ -15,7 +15,7 @@ const Chasse = () => {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>À propos de la chasse</h2>
         <p className={styles.text}>
-          La chasse en Kabylie offre une expérience unique pour les amateurs de nature et d'aventure. Les forêts denses et les montagnes offrent un habitat idéal pour une variété de gibier.
+          La chasse en Kabylie offre une expérience unique pour les amateurs de nature et d&apos;aventure. Les forêts denses et les montagnes offrent un habitat idéal pour une variété de gibier.
         </p>
       </section>
       <section className={styles.section}>
@@ -23,7 +23,7 @@ const Chasse = () => {
         <div className={styles.offers}>
           <div className={styles.offer}>
             <h3 className={styles.offerTitle}>Chasse guidée</h3>
-            <p className={styles.text}>Profitez d'une chasse guidée avec des experts locaux pour une expérience sécurisée et enrichissante.</p>
+            <p className={styles.text}>Profitez d&apos;une chasse guidée avec des experts locaux pour une expérience sécurisée et enrichissante.</p>
           </div>
           <div className={styles.offer}>
             <h3 className={styles.offerTitle}>Chasse en groupe</h3>
@@ -54,7 +54,7 @@ const Chasse = () => {
       </section>
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Contactez-nous</h2>
-        <p className={styles.text}>Pour plus d'informations ou pour réserver une activité, contactez-nous à <a href="mailto:info@idurar-venture.com" className={styles.link}>info@idurar-venture.com</a>.</p>
+        <p className={styles.text}>Pour plus d&apos;informations ou pour réserver une activité, contactez-nous à <a href="mailto:info@idurar-venture.com" className={styles.link}>info@idurar-venture.com</a>.</p>
       </section>
     </div>
   );

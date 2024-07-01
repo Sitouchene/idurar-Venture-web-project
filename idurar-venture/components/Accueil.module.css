@@ -45,7 +45,7 @@
   
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .barredefil {
     flex-direction: column;
     padding: 0.5rem;

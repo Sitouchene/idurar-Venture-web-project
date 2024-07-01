@@ -50,6 +50,7 @@ export default function PhotoGallery() {
           className={`${styles.photoContainer} ${
             index === currentPhotoIndex ? styles.active : ''
           }`}
+          style={{ aspectRatio: photo.aspectRatio }}
         >
           <Image
             src={photo.src}
@@ -57,6 +58,7 @@ export default function PhotoGallery() {
             layout="fill"
             objectFit="cover"
             className={styles.photo}
+            loading="lazy"
           />
           <div className={styles.overlay}>
             <h2 className={styles.title}>{photo.title}</h2>
