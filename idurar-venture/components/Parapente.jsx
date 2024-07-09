@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './Parapente.module.css';
-import parapente from '@/public/Parapente.webp'
+import parapente from '@/public/parapente.webp'
 import parapante2 from '@/public/parapante2.webp'
 import parapent3 from '@/public/parapent3.webp'
 
